@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
-import DocumentMeta from 'react-document-meta';
+import Helmet from 'react-helmet';
 import * as authActions from 'redux/modules/auth';
 
 @connect(
@@ -25,7 +25,7 @@ export default class Login extends Component {
     const styles = require('./Login.scss');
     return (
       <div className={styles.loginPage + ' container'}>
-        <DocumentMeta title="React Redux Example: Login"/>
+        <Helmet title="Login"/>
         <h1>Login</h1>
         {!user &&
         <div>
